@@ -1,8 +1,5 @@
 package br.com.dio.desafio.dominio;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -15,12 +12,6 @@ public class Main {
 		curso2.setTitulo("Curso JS");
 		curso2.setDescricao("excelente curso de JS com Camila");
 		curso2.setCargaHoraria(6);
-		
-		
-		Mentoria mentoria =  new Mentoria();
-		mentoria.setTitulo("Mentoria Java");
-		mentoria.setDescricao("Mentoria de java com camila ");
-		mentoria.setDateTime(LocalDate.now());
 		
 		
 

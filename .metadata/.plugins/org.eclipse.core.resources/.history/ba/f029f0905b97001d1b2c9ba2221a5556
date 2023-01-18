@@ -16,13 +16,13 @@ public class Curso extends Conteudo {
 
 	@Override
 	public String toString() {
-		return "Curso [titulo=" + getTitulo() + ", descricao=" + getDescricao() + ", cargaHoraria=" + cargaHoraria + "]";
+		return "Curso [titulo=" + titulo + ", descricao=" + descricao + ", cargaHoraria=" + cargaHoraria + "]";
 	}
 
 	@Override
 	public double calcularXP() {
 		// TODO Auto-generated method stub
-		return XP_PADRAO * cargaHoraria;
+		return 0;
 	}
 	
 	

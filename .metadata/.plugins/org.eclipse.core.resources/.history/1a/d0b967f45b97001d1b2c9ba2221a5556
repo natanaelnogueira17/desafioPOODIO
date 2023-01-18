@@ -1,20 +1,19 @@
 package br.com.dio.desafio.dominio;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Mentoria extends Conteudo{
 
-	private LocalDateTime data;
+	private LocalDateTime dateTime;
 	
 	
 
 	public LocalDateTime getDateTime() {
-		return data;
+		return dateTime;
 	}
 
-	public void setDateTime(LocalDate data) {
-		this.data = this.data;
+	public void setDateTime(LocalDateTime dateTime) {
+		this.dateTime = dateTime;
 	}
 
 	
@@ -27,7 +26,7 @@ public class Mentoria extends Conteudo{
 
 	@Override
 	public String toString() {
-		return "Mentoria [dateTime=" + data + ", getTitulo()=" + getTitulo() + ", getDescricao()=" + getDescricao()
+		return "Mentoria [dateTime=" + dateTime + ", getTitulo()=" + getTitulo() + ", getDescricao()=" + getDescricao()
 				+ ", toString()=" + super.toString() + "]";
 	}
 	
