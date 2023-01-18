@@ -6,30 +6,30 @@ import java.util.Optional;
 import java.util.Set;
 
 public class Dev {
-
+	
 	private String nome;
 	private Set<Conteudo> conteudoInscritos = new LinkedHashSet<>();
 	private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<Conteudo>();
-
+	
 	public void inscreverBootcamp(Bootcamp bootcamp) {
 		this.conteudoInscritos.addAll(bootcamp.getConteudos());
 		bootcamp.getDevinscricoes().add(this);
 	}
-
+	
 	public void progredir() {
-		Optional<Conteudo> conteudo = this.conteudoInscritos.stream().findFirst();
-		if (conteudo.isPresent()) {
+		Optional<Conteudo>conteudo = this.conteudoInscritos.stream().findFirst();
+		if(conteudo.isPresent()) {
 			this.conteudosConcluidos.add(conteudo.get());
 			this.conteudoInscritos.remove(conteudo.get());
-
-		} else {
+			
+		}else {
 			System.err.println("Você não está matriculado em nenhym conteudo");
 		}
 	}
-
+	
 	public double calcularTotalXP() {
-		return this.conteudosConcluidos.stream().mapToDouble(Conteudo -> calcularTotalXP()).sum();
-
+	return 	this.conteudosConcluidos.stream().mapToDouble(Conteudo ->calcularTotalXP()).sum();
+		
 	}
 
 	public String getNome() {
@@ -73,5 +73,8 @@ public class Dev {
 		return Objects.equals(conteudoInscritos, other.conteudoInscritos)
 				&& Objects.equals(conteudosConcluidos, other.conteudosConcluidos) && Objects.equals(nome, other.nome);
 	}
+	
+	
+	
 
 }

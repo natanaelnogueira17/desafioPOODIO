@@ -34,18 +34,14 @@ public class Main {
 		Dev dev =  new Dev();
 		dev.setNome("natanael");
 		dev.inscreverBootcamp(bootcamp);
-		dev.progredir();
-		dev.calcularTotalXP();
-		dev.progredir();
-		dev.calcularTotalXP();
 		
 		
 		
 		Dev dev2 = new Dev();
 		dev2.setNome("joao");
 		dev2.inscreverBootcamp(bootcamp);
-		dev2.progredir();
-		dev2.calcularTotalXP();
+		
+		
 		
 	}
 
